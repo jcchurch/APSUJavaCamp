@@ -3,8 +3,7 @@
 ## What is JShell
 
 - JShell is a feature of Java that allows us to program one line at a time.
-- It's great for new programmers because it allows us to
-  write one line and immediately see the results.
+- It's great for new programmers because it allows us to write one line and immediately see the results.
 - Let's search for the JShell application.
 
 ## Type your first line of Java
@@ -190,10 +189,38 @@ Types are important to Java. All variables are stored with a type. **int** is fo
 
 There is another type called **float** for **single-precision floating point numbers.** Don't use this.
 
+## Variables
+
+What will this print?
+
+    6.0 / 4.0
+
+. . .
+
+1.5 Because we used a decimal point, Java believes these are floating point numbers. In Computer Science, 6 has a slightly different meaning than 6.0, even though they are the same value.
+
 ## Types
 
 Types are important to Java. All variables are stored with a type. **String** is for text data. Notice that "String" begins with an upper case letter.
 
-    String name = "YourFirstNameHere" + " " + "YourLastNameHere"
+    String name = "YourFirstNameHere"
+                  + " " + "YourLastNameHere"
 
 What will **name** become?
+
+## Thoughts on Types
+
+There are many types in Java. In this week, we will limit ourselves to 4.
+
+- **int** is used for integer values (think whole numbers).
+- **double** is used for floating point numbers. These numbers use a decimal point.
+- **String** is used for text data, such as your name or a message.
+- **boolean** is used to store **true** and **false**.
+
+## Thoughts on types
+
+Now that they are off the screen, what are the four Java types that you should remember?
+
+. . .
+
+int, double, String, and boolean
