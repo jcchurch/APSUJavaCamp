@@ -152,11 +152,21 @@ Pair up: Imagine that you have two objects on your screen. Guide the Green Circl
 - Fortran
 - C#
 
+## Where is Java used?
+
+- Android Phone Applications
+- Web Servers
+- Desktop Applications
+- Rarely is it used to make games, but there are some.
+    - The best example of a Java game is Minecraft.
+
 ## IDE: Integrated Development Environment
 
 - An integrated development environment, or IDE, combine all the tools needed to write, compile, and debug a program into a single software application.
+- IDEs make coding easier because they allow you to run your software with a single button click.
 - Examples are NetBeans, Microsoft Visual Studio, Eclipse, CodeWarrior, etc.
-- We will be using NetBeans in this course.
+- We will be using NetBeans in this camp.
+    - NetBeans is written in Java.
 
 # What are Programming Languages Made Of?
 
@@ -172,7 +182,7 @@ Pair up: Imagine that you have two objects on your screen. Guide the Green Circl
 
 - Names made up by the programmer used to identify parts of the program.
 - Not part of the language.
-- Used to represent variables, functions, classes, and more.
+- Used to represent variables, methods, classes, and more.
 
 ## Operators 
 
@@ -227,3 +237,8 @@ All programs from Microsoft Word to Facebook to Fortnight follow this general ap
 3. Code a little.
 4. Test. Return to Step 2 or stop if satisfied.
 
+## Fill the rest of the time.
+
+Type into notepad your instructions for making a peanut butter and jelly sandwich.
+
+If there is enough time, we'd like for you to tell us your instructions.

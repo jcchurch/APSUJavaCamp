@@ -122,6 +122,7 @@ What will this output?
 . . .
 
 If it looks weird, that's because Java won't put spaces between the two strings.
+
 ## Strings
 
 **Concatenation** is when we join two strings together. We use the "+" operator to join two strings. (It's the same symbol as addition.)
@@ -224,3 +225,65 @@ Now that they are off the screen, what are the four Java types that you should r
 . . .
 
 int, double, String, and boolean
+
+## Thoughts on types
+
+Of those four types, which one is written with an upper case letter?
+
+. . .
+
+It's `String`. The other three are always written with a lowercase letter.
+
+## Fill the remaining time.
+
+Geometry time.
+
+- Imagine that we have a circle.
+- The diameter of a circle is 5.
+- The area of a circle is $\pi \times radius^2$.
+- What is the area? Try to solve this using using the command line.
+
+## Answer
+
+- The answer is approximately 19.6. Did you get this?
+- You must first divide the diameter by 2.
+- $pi * (5.0/2) * (5.0/2)$
+
+## Fill the remaining time.
+
+Solve the following.
+
+    2 + 2 * 2 - 2
+    5 + 2 * 4
+    10 / 2 - 3
+    8 + 12 * 2 - 4
+    6 - 3 * 2 + 7 - 1
+
+## Evaluate.
+
+    Evaluate each of the following.
+    4  = 2 + 2 * 2 - 2
+    13 = 5 + 2 * 4
+    2  = 10 / 2 - 3
+    28 = 8 + 12 * 2 - 4
+    6  = 6 - 3 * 2 + 7 - 1
+
+## Evaluate.
+
+The use of parentheses have the highest levels of precedence.
+
+    Evaluate.
+     2 + 2  *  2 - 2
+    (2 + 2) *  2 - 2
+     2 + 2  * (2 - 2)
+    (2 + 2) * (2 - 2)
+
+## Evaluate.
+
+The use of parentheses have the highest levels of precedence.
+
+    4  =  2 + 2  *  2 - 2
+    6  = (2 + 2) *  2 - 2
+    2  =  2 + 2  * (2 - 2)
+    0  = (2 + 2) * (2 - 2)
+
