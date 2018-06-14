@@ -59,7 +59,7 @@ Under the line of code that contains **main**, look for the next line.
 
     }
 
-If your code looks like this, click the green arrow on the menu button. This is the "Play" button.
+If your code looks like this, click the green arrow on the menu button. This is the "Play" button. If we ever tell you to empty a method, it should look something like this.
 
 ## Program Output
 
@@ -97,6 +97,38 @@ If you don't see your message, please raise your hand.
         System.out.println("My favorite song is [SONG]");
     }
 
-Run your program again. Java will execute lines in order from first line in **main** to the last line.
+Run your program again. Java will execute lines in order from first line in **main** to the last line. All statements in Java must end with a semicolon.
+
+## Circle Area Problem.
+
+Empty the `main` method. It should have zero lines in it. This is the same problem that we looked at earlier. Let's write this in Java.
+
+- Imagine that we have a circle.
+- The diameter of a circle is 5.
+- The area of a circle is $\pi \times radius^2$.
+- What is the area? 
+
+## Circle Area Problem.
+
+See if you can write this on your own without seeing the solution. Make sure that you put a semicolon on the end of each statement.
+
+- Write a variable for a floating point variable named `diameter` that is equal to $5$.
+- Write a variable for a floating point variable named `radius` that is equal to $diameter / 2$.
+- Write a variable for a floating point variable named `pi` that is equal to $3.1415$.
+- Write a variable for a floating point variable named `area` that is equal to $\pi radius^2$.
+- We will help you with the print statement.
+
+## Circle Area Problem.
+
+The solution.
+
+    public static void main(String[] args) {
+        double diameter = 5;
+        double radius = diameter / 2;
+        double pi = 3.1415;
+        double area = pi * radius * radius;
+        System.out.println("The circle area is "
+                           + area + " units squared.");
+    }
 
 

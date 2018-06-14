@@ -211,7 +211,7 @@ What will **name** become?
 
 ## Thoughts on Types
 
-There are many types in Java. In this week, we will limit ourselves to 4.
+There are many types in Java. Here are 4 common types.
 
 - **int** is used for integer values (think whole numbers).
 - **double** is used for floating point numbers. These numbers use a decimal point.
