@@ -131,4 +131,79 @@ The solution.
                            + area + " units squared.");
     }
 
+## Circle Area Problem.
 
+The result.
+
+    The circle area is 19.634375000000002 units squared.
+
+That is not good. We should round these values.
+
+## Circle Area Problem.
+
+Change this.
+
+        System.out.println("The circle area is "
+                           + area + " units squared.");
+
+To this.
+
+        System.out.println("The circle area is "
+                           + Math.round(area)
+                           + " units squared.");
+
+## Circle Area Problem
+
+The result.
+
+    The circle area is 20 units squared.
+
+Could we get better precision? Yes, but this requires some math.
+
+Let's try to get this to two decimal places.
+
+1. Multiply the value we wish to round by 100.
+2. Call round.
+3. Divide the value by 100.
+
+## Circle Area Problem
+
+Modify our line containing `Math.round` to this.
+
+        System.out.println("The circle area is "
+                           + Math.round(area * 100) / 100.0
+                           + " units squared.");
+
+Why do I have to make the last 100 appear as "100.0"? Why can't it be "100"?
+
+## Circle Area Problem
+
+The result.
+
+    The circle area is 19.63 units squared.
+
+This is a good result. We know that it's more than 19 and less than 20. It took a language quirk to get us there.
+
+## Language Quirks
+
+Java has many quirks and learning these quirks is part of learning Java.
+
+In English, to make a noun plural, you add an "s" onto the end. But if you wrote that, "I saw cows, deers, mouses, wolfs, oxs, and fairys traveling to the volcanos," they might help you in more ways than one.
+
+Languages, both natural and in programming, have quirks.
+
+## Fill the rest of the hour.
+
+Create a Java program that displays a rocket ship using ASCII art.
+
+         |     | |
+        / \    | |
+       |--o|===|-|
+       |---|   | |
+      /     \  | |
+     | U     | | |
+     | S     |=| |
+     | A     | | |
+     |_______| |_|
+      |@| |@|  | |
+    ___________|_|_
