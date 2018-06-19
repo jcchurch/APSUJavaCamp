@@ -141,21 +141,72 @@ This will produce a compiler error because Java doesn't automatically import the
 ## Importing the Scanner class
 
 - The Scanner class is found in the **java.util.Scanner** class library.
-    - Import statements are similar to include statements in C++.
     - We must put the statement "import java.util.Scanner;" near the top of our code.
-- NetBeans has a tool called "Fix Imports" which will automatically write this line for you.
+- NetBeans has a tool called "Fix Imports" which will write this line for you.
     - On Windows, this is "Ctrl+Shift+I".
     - On Mac, this is "Cmd+Shift+I".
-- I will be recording a video on how to use this feature.
+- We will need to use this tool frequently.
 
 ## Using the Scanner class.
 
-Once we have the class imported, we can use it. Here's an example.
+Once we have the class imported, we can use it. Here's an example. Because your age is a whole number, we must use the `int` type.
 
     System.out.println("This program reports your age in five years.");
-    Scanner keyboard = new Scanner(System.in);
     System.out.print("What is your age? ");
+
     int age = keyboard.nextInt();
     int agePlusFive = age + 5;
     System.out.println("In five years, you will be " +
-        agePlusFive + " years old");
+        agePlusFive + " years old.");
+
+## Program output
+
+When we run this program, this is the output:
+
+    This program reports your age in five years.
+    What is your age? 16
+    In five years, you will be 21 years old.
+
+## Another example: Text
+
+This program will request your name and say high back to you. Because we are reading in a name (which is text), we use the `String` type.
+
+    System.out.println("Howdy, camper.");
+    System.out.print("What is your name? ");
+
+    String name = keyboard.nextLine();
+    System.out.println("Hello, " + name +
+        "! We are glad you could be here.");
+
+## Program Output
+
+    Howdy, camper.
+    What is your name? George Washington
+    Hello, George Washington! We are glad you could be here.
+
+## Another example: Double
+
+This program will request your GPA and report it back to you. Because it uses a floating point number, we require a `double` data type.
+
+    System.out.println("Howdy, camper.");
+    System.out.print("What is your gpa? ");
+
+    double gpa = keyboard.nextDouble();
+    System.out.println("Hello! You have a " +
+        gpa + " grade point average.");
+
+## Program Output
+
+    Howdy, camper.
+    What is your gpa? 3.85
+    Hello! You have a 3.85 grade point average.
+
+## Fill the rest of the hour.
+
+Write a program which requests, in this order:
+
+- Someone's name.
+- Someone's age.
+- Someone's GPA
+
+The program then reports this information back to the screen on a single line.
