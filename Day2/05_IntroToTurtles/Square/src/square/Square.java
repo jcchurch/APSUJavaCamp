@@ -7,6 +7,7 @@ import turtles.Turtle;
 
 public class Square extends Sandbox {
 
+    @Override
     public void draw() {
         Turtle turtle = new Turtle();
         add(turtle);

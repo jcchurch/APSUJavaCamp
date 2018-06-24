@@ -40,6 +40,7 @@ In your main method, add one line of code. It will look like this.
 
 Create a new method called "draw".
 
+    @Override
     public void draw() {
         Turtle turtle = new Turtle();
         add(turtle);
@@ -51,6 +52,7 @@ The error on "Turtle" will require you to fix your imports again. Run your progr
 
 Move the turtle.
 
+    @Override
     public void draw() {
         Turtle turtle = new Turtle();
         add(turtle);
