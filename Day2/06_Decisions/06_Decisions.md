@@ -158,9 +158,10 @@ This code prints "x is equal to 0!" and "y is equal to 1!". Since there is no us
 
 - Do not place ; after (expression).
 
-## Examples.
+## New Project: GreenAndRed
 
 - Create a new project called "GreenAndRed".
+- Import the TurtleLogo.jar file.
 - We will ask the user for an integer representing the size of the desired square BUT will change the color of the square under certain conditions.
     - If the square size is greater than 50, we will make the square GREEN.
     - If the square size is greater than 100, we will make the square RED.
