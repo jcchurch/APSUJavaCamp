@@ -1,5 +1,5 @@
 *.class
 *.swp
-/05_IntroToTurtles/Square/nbproject/private/
-/05_IntroToTurtles/Square/build/
 /turtlelogo/dist/
+/Day2/05_IntroToTurtles/Square/build/
+/Day2/05_IntroToTurtles/Square/nbproject/private/
