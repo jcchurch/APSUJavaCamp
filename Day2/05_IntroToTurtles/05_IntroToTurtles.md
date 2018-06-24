@@ -113,6 +113,8 @@ You can change the color using the method `SetColor`. For example.
     turtle.left();
     // ... more lines which draw
 
+You will need to "Fix Imports" and you must select "import javafx.scene.paint.Color;". It's often not the first option.
+
 This will make the color of the square green.
 
 ## Rainbow Colors
