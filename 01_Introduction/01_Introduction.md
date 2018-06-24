@@ -11,9 +11,9 @@ This is a general discussion.
 - Developers, using a **programming language**, translate a problem into that
   language, creating **code**.
 - Developers then pass that **code** into a **compiler**. This creates a file called
-  an executable. They give that file to someone like you.
-- You then ask the **operating system** (such as Windows, Mac OSX, or Linux) to then
-  see the original code in action.
+  an executable. They give that file to someone who will use the software.
+- The user will then ask the **operating system** (such as Windows, Mac OSX, or Linux) to then
+  see the code in action.
 
 You will become the **developer** at this camp.
 
@@ -23,11 +23,13 @@ You will become the **developer** at this camp.
 - Program: instructions in computer memory that solve a problem
 - Programmer: person who writes instructions (i.e. programs) to make the computer perform a task
 
-With out a programmer, there are no programs. With out programs, a computer cannot do anything.
+Without a programmer, there are no programs. Without programs, a computer cannot do anything.
 
 ## More Terms
 
 - Language: A set of grammar which is used to define a solution to a problem.
+    - Another word for **grammar** is **syntax**.
+    - Making a grammar mistake in code is called a **syntax error**.
 - Compiler: A tool which converts a solution into software, which a computer can understand. 
 - Operating System: Software which allows you, the user, to execute other software and interacts with hardware.
 
