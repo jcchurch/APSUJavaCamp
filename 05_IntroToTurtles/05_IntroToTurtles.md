@@ -49,7 +49,7 @@ The error on "Turtle" will require you to fix your imports again. Run your progr
 
 ## Make the turtle move.
 
-Create a new method called "draw".
+Move the turtle.
 
     public void draw() {
         Turtle turtle = new Turtle();
@@ -80,7 +80,7 @@ Run your program. The turtle should have turned left and moved forward again. Wh
 ## 90 and 100
 
 - The "turtle.left(90)" means that the turtle will turn to the left 90 degrees. A 90 degree turn is a right-angle turn.
-- The "turtle.forward(100)" means that the turtle will move forward 100 units. In this case, a unit is equal to one pixel on the monitor.
+- The "turtle.forward(100)" means that the turtle will move forward 100 units. In this case, 1 unit is equal to 1 pixel on the monitor.
 
 ## Send the turtle back home.
 
@@ -121,14 +121,32 @@ This will make the color of the square green.
 
 ![Rainbow Square](images/rainbowsquare.png)
 
-## Make a new turtle.
+## Up and Down
 
-Create a new turtle in your `draw` method. Name your turtle. I'm going to name mine "george". You can place your turtle in the code after the original `add(turtle)` line.
+We can control the turtle's tail using the commands "turtle.up()" and "turtle.down()".
 
-     Turtle turtle = new Turtle();
-     add(turtle);
+- If the tail is down, that means it is drawing.
+- If the tail is up, that means it is not drawing.
 
-     Turtle george = new George();
-     add(george);
+## Challenge: Two squares.
 
-We can now control our second turtle as an independent turtle.
+Challenge: Draw a second square to the right of your first square. The second square is 50 units (or pixels) to the right of the first. There should be no lines connecting the two squares.
+
+- Where does your first square end?
+- How far will you have to move from the first square's end point to get to the second square's starting point?
+- Can you somehow copy the first square to avoid retyping it?
+
+![Two Squares](images/twosquares.png)
+
+## Problem.
+
+- There's a problem with our code.
+- We have two segments of code which do identical things.
+- Programmers think this is bad and we will look more into how to fix this in future sessions.
+
+## Fill the rest of the hour.
+
+For both of these challenges, sketch out your plan in Microsoft Paint or draw the plan on paper.
+
+- Challenge: Draw a house with green walls, a blue front door, and a red roof.
+- Challenge: Write your name using Turtles. You will need a combination of "turtle.up()" and "turtle.down()" to do this. Make each letter in your name a different color.

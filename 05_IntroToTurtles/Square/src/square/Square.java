@@ -11,10 +11,24 @@ public class Square extends Sandbox {
         Turtle turtle = new Turtle();
         add(turtle);
         
-        Turtle george = new Turtle();
-        add(george);
-
         turtle.setColor(Color.GREEN);
+        turtle.forward(100);
+        turtle.left();
+        turtle.setColor(Color.YELLOW);
+        turtle.forward(100);
+        turtle.left();
+        turtle.setColor(Color.RED);
+        turtle.forward(100);
+        turtle.left();
+        turtle.setColor(Color.PALEGOLDENROD);
+        turtle.forward(100);
+        turtle.left();
+        
+        turtle.up();
+        turtle.forward(150);
+        turtle.down();
+        
+                turtle.setColor(Color.GREEN);
         turtle.forward(100);
         turtle.left();
         turtle.setColor(Color.YELLOW);
