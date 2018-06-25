@@ -41,7 +41,7 @@ This is less to type, but it without careful typing and understanding, there is 
 ## The Sections of The for Loop
 
 - The initialization section of the for loop allows the loop to initialize its own control variable.
-- The test section of the for statement acts in the same manner as the condition section of a while loop.
+- The test section will test if the condition is true before every loop.
 - The update section of the for loop is the last thing to execute at the end of each loop.
 
 ## The for Loop Initialization
@@ -63,14 +63,6 @@ This is less to type, but it without careful typing and understanding, there is 
 - You should avoid updating the control variable of a for loop within the body of the loop.
 - The update section should be used to update the control variable.
 - Updating the control variable in the for loop body leads to hard to maintain code and difficult debugging.
-
-## Differences between for and while
-
-- for loops are often called "counting loops", since they are often used for counting.
-- Each of the essential parts of a for loop are encouraged by Java.
-    - However, they can be ignored.
-- while loops are designed for processes in which we don't know how many loops are needed (for example, input validation).
-- for loops are designed for processes in which we know exactly how many loops are needed.
 
 ## New Project: Shapes
 
@@ -117,7 +109,7 @@ Here, we will set up some variables.
     double degrees = 120;
     double distance = 100;
 
-We will move the turtle to create 3 sided shape, each time 100 units long and turning 120 degrees.
+We will move the turtle to create 3 sided shape, each time moving 100 units forward and turning 120 degrees.
 
 ## Move the turtle.
 
