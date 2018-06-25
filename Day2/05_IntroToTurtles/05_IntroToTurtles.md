@@ -142,11 +142,14 @@ Challenge: Draw a second square to the right of your first square. The second sq
 
 ![Two Squares](images/twosquares.png)
 
-## Problem.
+## Challenge
 
-- There's a problem with our code.
-- We have two segments of code which do identical things.
-- Programmers think this is bad and we will look more into how to fix this in future sessions.
+Make the size of the **second** square random. To do this, you will need to:
+
+- Create a Random number generator.
+- Assign a variable called "sides" to a random value from 10 to 150. What type should this variable be?
+- Rather than have each side of the second square move forward `100` times, make it move forward `sides` times.
+- Ask for help on any of the parts.
 
 ## Fill the rest of the hour.
 
