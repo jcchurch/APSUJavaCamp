@@ -10,6 +10,8 @@ Take a moment to remind yourself what a for-loop looks like.
         statement(s);
     }
 
+# Random Turtle Walk
+
 ## Goal
 
 - In this activity, our goal is to create a random turtle walk.
@@ -132,9 +134,13 @@ Here "Color" is a type that we haven't discussed before. Yes, color can be repre
 - No one will have the same artwork on their screen!
 - Each line should be one of the seven colors.
 
-## Next art: Triangle Sprial.
+# The Triangle Spin
 
-To get started on this, remove the for loop and all the code inside.
+## Next art: Triangle Spin
+
+To get started on this, remove the for loop and all the code inside. You will need to define the size of your triangles.
+
+    int size = 300;
 
 ## Here we go.
 
@@ -164,5 +170,34 @@ This draws one triangle.
         turtle.down();
         turtle.left(185);
     } // End the for loop
+
+Watch the art work happen!
+
+# The Single Line Spiral
+
+## Next art: The Spirals.
+
+To get sarted on this, remove the for loops and all of the code inside.
+
+## Here we go.
+
+We will be drawing 72 spirals, each 5 degrees apart. 72 times 5 is 360. In the for loop, we select a color and draw one spiral. Notice that we do not finish this for loop.
+
+    for (int t = 0; t < 72; t++) {
+        turtle.setColor(colors[t % 7]);
+        for (int i = 0; i < 100; i++) {
+            turtle.forward(i);
+            turtle.left(10);
+        }
+
+## Part 2
+
+Now that we have drawn one spiral, pick up the pen, return home, put the pen back down, and turn 5 degrees to the left.
+
+        turtle.up();
+        turtle.goHome();
+        turtle.down();
+        turtle.left(5);
+    }
 
 Watch the art work happen!
