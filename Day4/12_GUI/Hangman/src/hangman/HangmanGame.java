@@ -10,22 +10,26 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 
-public class HangmanCanvas extends Canvas {
-    
-    private String word;
+public class HangmanGame {
+
+    private Canvas canvas;
     private char[] letters;
-    private int lives = 0;
     private char[] revealed;
     private int blanks;
+    private int lives;
+    private String word;
     
-    public HangmanCanvas(String w, double width, double height) {
-        super(width, height);
-        
+    public HangmanGame(double width, double height) {        
         letters = new char[] {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
         lives = 5;
-        word = w;
+        word = "ENVELOPE";
         revealed = new char[word.length()];
         blanks = word.length();
+        canvas = new Canvas(width, height);
+    }
+    
+    public Canvas getCanvas() {
+        return canvas;
     }
     
     public boolean lost() {
@@ -59,8 +63,8 @@ public class HangmanCanvas extends Canvas {
     }
     
     public void draw() {
-        GraphicsContext gc = getGraphicsContext2D();
-        gc.clearRect(0, 0, getWidth(), getHeight());
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
         gc.setLineWidth(3);
         gc.setStroke(Color.BLUE);
         

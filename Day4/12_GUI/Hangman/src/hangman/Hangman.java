@@ -33,18 +33,19 @@ public class Hangman extends Application {
         Label playHangman = new Label("Play Hangman! Guess a letter.");
         TextField field = new TextField();
         Button button = new Button("Go!");
-        HangmanCanvas game = new HangmanCanvas("ENVELOPE", 300, 300);
+        HangmanGame game = new HangmanGame(300, 300);
 
         HBox hPane = new HBox();
         hPane.getChildren().addAll(playHangman, field, button);
         
         VBox vPane = new VBox();
-        vPane.getChildren().addAll(game, hPane, gameState);
+        vPane.getChildren().addAll(game.getCanvas(), hPane, gameState);
         
         game.draw();
         
         button.setOnAction(event -> {
               char guess = field.getText().toUpperCase().charAt(0);
+              field.setText("");
               game.scratch(guess);
               game.draw();
               
