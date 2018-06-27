@@ -14,7 +14,7 @@ import turtles.Turtle;
  */
 public class Flower {
 
-    private final Turtle turtle;
+    private Turtle turtle;
     
     public Flower() {
         turtle = new Turtle();
@@ -37,16 +37,14 @@ public class Flower {
     }
     
     public void arc(double radius, double angle) {
-        double arc_length = 2 * Math.PI * radius * Math.abs(angle) / 360.0;
+        double arc_length = Math.PI * radius * Math.abs(angle) / 180.0;
         
         int segments = (int) (arc_length / 4) + 1;
         
         double step_length = arc_length / segments;
         double step_angle = angle / segments;
         
-        turtle.left(step_angle / 2);
         lines(segments, step_length, step_angle);
-        turtle.right(step_angle / 2);
     }
     
     public void petal(double radius, double angle) {

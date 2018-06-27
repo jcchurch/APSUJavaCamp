@@ -17,11 +17,11 @@ public class FlowerArt extends Sandbox {
 
     @Override
     public void draw() {
-        RandomFlower random = new RandomFlower();
-        add(random.get());
+        RandomFlower flower = new RandomFlower();
+        add(flower.get());
         
-        for (int i = 0; i < 10; i++) {
-            random.draw();
+        for (int i = 0; i < 100; i++) {
+            flower.draw();
         }
     }
     

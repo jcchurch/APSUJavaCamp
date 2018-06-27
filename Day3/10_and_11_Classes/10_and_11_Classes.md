@@ -1,5 +1,11 @@
 % 10: Classes 
 
+# Special note
+
+- This is a very long presentation that is estimated to take 2 hours of time.
+- The effects are very cool.
+- Take breaks.
+
 # What are classes?
 
 ## Object Oriented Programming
@@ -220,7 +226,7 @@ Return to your `draw` method in the `FlowerArt` class. (Java programmers are oft
         flower.lines(100, 4, 2);
     }
 
-Run the code. You should get a curved line on the screen.
+Run the code. You should get a curved line on the screen. Explore a bit with the code. Change the 2 for the angle to a 10. What happens?
 
 ## Make Polygons: Flower.java
 
@@ -247,14 +253,14 @@ An arc is circle that didn't finish the job of making a complete circle. Here's 
 
 $$arc = \frac{\pi r \theta}{180}$$
 
-We need this formula in order to make our flowers.
+Here, $r$ means the radius of a circle. We need this formula in order to make our flowers.
 
 ## Make Arcs: Flower.java
 
 Return to Flower.java and make a method called "arc":
 
     public void arc(double radius, double angle) {
-        double arc_length = Math.PI * radius * Math.abs(angle) / 180.0;
+        double arc_length = Math.PI * radius * angle / 180.0;
         int segments = (int) (arc_length / 4) + 1;
 
         double step_length = arc_length / segments;
@@ -310,3 +316,87 @@ Finally, we can draw flowers. Add this method to Flower.java named "draw". The f
 Return to Flower.java. Remove the line that has "flower.petal" and replace it with this:
 
     flower.draw(Color.GREEN, 8, 100, 75);
+
+- This flower will be green.
+- This flower will have 8 petals.
+- The size of each petal will be 100 units.
+- The radius of each petal will be 75 units.
+
+## Experiment with the FlowerArt.java file.
+
+- Play with the 4 parameters until you have a pretty flower.
+    - The first parameter is the color.
+    - The second is the number of petals.
+    - The third is the size.
+    - The fourth is the shape of the petal. Find the best value of the shape.
+
+## More Flowers to Try
+
+    flower.draw(Color.GREEN, 8, 100, 75);
+    flower.draw(Color.BLUE, 3, 100, 135);
+    flower.draw(Color.GREEN, 20, 100, 50);
+    flower.draw(Color.GREEN, 6, 100, 60);
+
+# Field of Flowers
+
+## Field of Flowers
+
+Let's great a giant field of flowers. With our code tucked away into a class, we can reuse it however we wish.
+
+## Create a new class named "RandomFlower".
+
+- Right click on the package "flowerart" in the Project view.
+- Select "New..." and then "Java Class".
+- Name this new class "RandomFlower".
+- Make sure that the package says "flowerart". If you don't, this may not work.
+
+## Modify the Class
+
+Because a RandomFlower is a Flower, we need to modify the class. Find the line with "public class RandomFlower {". Change it to this:
+
+    public class RandomFlower extends Flower {
+
+This handy trick allows us to have every method in Flower without having to rewrite the code. This trick is one that I use often. If you want to create a specialized version of a class, extend it.
+
+## Create a `draw` method.
+
+This method will draw one flower randomly on the screen. Here, I create an array of my favorite seven colors. Make sure that you have exactly 7 elements. You may change the colors.
+
+    public void draw() {
+        Random rng = new Random();
+        Color[] colors = {Color.RED, Color.ORANGE,
+                          Color.YELLOW, Color.GREEN,
+                          Color.BLUE, Color.INDIGO,
+                          Color.VIOLET};
+
+## Part 2 of 3: Generate a bunch of random values.
+
+We are generating a bunch of random values. We randomly generate a size, number of petals, radius, and a color. We also generate a random x and y where we will display the center of the flower.
+
+        double size = rng.nextDouble() * 100 + 50;
+        int petals = rng.nextInt(5) + 8;
+        double radius = rng.nextDouble() * 75 + 15;
+        Color color = colors[ rng.nextInt(7) ];
+        
+        double x = rng.nextInt(600);
+        double y = rng.nextInt(600);
+
+## Part 3 of 3: Move turtle and display.
+
+We must get the turlte, move it to an (x,y) location, then draw the flower.
+
+        Turtle turtle = get();
+        
+        turtle.up();
+        turtle.goTo(x, y);
+        turtle.down();
+        draw(color, petals, radius, size);
+    }
+
+## Modify FlowerArt.java
+
+Remove your random flowers in the `draw` method and replace it with this. This will draw 100 randomly genreated flowers on the screen.
+
+        for (int i = 0; i < 100; i++) {
+            flower.draw();
+        }

@@ -13,17 +13,8 @@ import turtles.Turtle;
  *
  * @author jcchurch
  */
-public class RandomFlower {
-    public Flower flower;
-    
-    public RandomFlower() {        
-        flower = new Flower();
-    }
-    
-    public Turtle get() {
-        return flower.get();
-    }
-    
+public class RandomFlower extends Flower{
+
     public void draw() {
         Random rng = new Random();
         Color[] colors = {Color.RED, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.BLUE, Color.INDIGO, Color.VIOLET};
@@ -41,6 +32,6 @@ public class RandomFlower {
         turtle.up();
         turtle.goTo(x, y);
         turtle.down();
-        flower.draw(color, petals, radius, size);
+        draw(color, petals, radius, size);
     }
 }
