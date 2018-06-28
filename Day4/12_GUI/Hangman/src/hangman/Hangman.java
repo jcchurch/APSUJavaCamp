@@ -42,6 +42,9 @@ public class Hangman extends Application {
         vPane.getChildren().addAll(game.getCanvas(), hPane, gameState);
         
         game.draw();
+
+        primaryStage.setScene(new Scene(vPane));
+        primaryStage.show();
         
         button.setOnAction(event -> {
               char guess = field.getText().toUpperCase().charAt(0);
@@ -57,8 +60,5 @@ public class Hangman extends Application {
                   gameState.setText("You lost!");
               }
            });
-        
-        primaryStage.setScene(new Scene(vPane));
-        primaryStage.show();
     }
 }
