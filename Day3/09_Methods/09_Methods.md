@@ -114,7 +114,7 @@ My method looks like this. Don't type this.
 - Right click and find the menu option for "Refactor".
 - Find "Introduce".
 - Find and click on the menu for "Method..."
-- (You can also tap "Alt+Shift+M" on the keyboard.
+- (You can also tap "Alt+Shift+M" on the keyboard.)
 - Name this method "drawTriangle".
 
 ## Again: Circle
@@ -123,7 +123,7 @@ My method looks like this. Don't type this.
 - Right click and find the menu option for "Refactor".
 - Find "Introduce".
 - Find and click on the menu for "Method..."
-- (You can also tap "Alt+Shift+M" on the keyboard.
+- (You can also tap "Alt+Shift+M" on the keyboard.)
 - Name this method "drawCircle".
 
 ## Again: Circle
@@ -132,7 +132,7 @@ My method looks like this. Don't type this.
 - Right click and find the menu option for "Refactor".
 - Find "Introduce".
 - Find and click on the menu for "Method..."
-- (You can also tap "Alt+Shift+M" on the keyboard.
+- (You can also tap "Alt+Shift+M" on the keyboard.)
 - Name this method "moveToNextShape".
 
 ## When you are done.
