@@ -6,10 +6,12 @@
 package paint;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
@@ -24,7 +26,6 @@ import javafx.stage.Stage;
  */
 public class PaintApp extends Application {
 
-    public Paint color;
     public double size;
     public int shape;
 
@@ -37,13 +38,18 @@ public class PaintApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        color = Color.BLUE;
         size = 10;
         shape = 0;
+        int width = 600;
+        int height = 600;
         
-        Canvas canvas = new Canvas(600, 600);
-        Slider slider = new Slider(0, 200, 10);
+        Canvas canvas = new Canvas(width, height);
+        Label sizeLabel = new Label("Size: ");
         Canvas colors = new Canvas(360, 50);
+        
+        Slider slider = new Slider(1, 200, 10);
+        slider.setShowTickMarks(true);
+        slider.setShowTickLabels(true);
         
         Button circle = new Button("Circle");
         Button square = new Button("Square");
@@ -51,9 +57,15 @@ public class PaintApp extends Application {
         
         HBox buttons = new HBox();
         buttons.getChildren().addAll(clear, circle, square);
+        buttons.setAlignment(Pos.CENTER);
+        
+        HBox sliderPane = new HBox();
+        sliderPane.getChildren().addAll(sizeLabel, slider);
+        sliderPane.setAlignment(Pos.CENTER);
 
         VBox vPane = new VBox();
-        vPane.getChildren().addAll(canvas, buttons, slider, colors);
+        vPane.getChildren().addAll(canvas, buttons, sliderPane, colors);
+        vPane.setAlignment(Pos.CENTER);
 
         Scene scene = new Scene(vPane);
         primaryStage.setScene(scene);
@@ -61,6 +73,9 @@ public class PaintApp extends Application {
         
         GraphicsContext colorC = colors.getGraphicsContext2D();
         GraphicsContext canvasC = canvas.getGraphicsContext2D();
+        canvasC.setFill(Color.WHITE);
+        canvasC.fillRect(0, 0, width, height);
+        canvasC.setFill(Color.BLUE);
 
         for (int i = 0; i < 360; i++) {
             Color c = Color.hsb(i, 1, 1);
@@ -86,11 +101,18 @@ public class PaintApp extends Application {
             size = slider.getValue();
         });
         
+        slider.setOnMouseDragged(event -> {
+            size = slider.getValue();
+        });
+        
         circle.setOnAction(event -> {shape = 0;});
         square.setOnAction(event -> {shape = 1;});
         
         clear.setOnAction(event -> {
-            canvasC.clearRect(0, 0, 600, 600);
+            Paint c = canvasC.getFill();
+            canvasC.setFill(Color.WHITE);
+            canvasC.fillRect(0, 0, width, height);
+            canvasC.setFill(c);
         });
     }
 
