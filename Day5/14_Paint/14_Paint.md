@@ -119,7 +119,7 @@ The start method will contain ...
 - The full code for the look of our Paint application.
 - All of the event handler code.
     - In the hangman game, there was 1 event handler.
-    - In this program, there are 9 event handlers.
+    - In this program, there are 8 event handlers.
 - There are two methods in this entire program: draw and start.
 
 ## Part 1. Return to `start`.
